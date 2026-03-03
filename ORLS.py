@@ -91,7 +91,7 @@ Integration_Time = [20, 20, 20, 20]
 
 # === User interface messages ===
 # Startup text displayed in the GUI, including software version information.
-message = "Wolcome to Arduino for bulk evaluating by ligth (A.B.E.L)"
+message = "Welcome to Open-source Real-time Light Scattering system (ORLS)"
 message2 = "Version 3.0 February 2026 \n ___________________________________________________________ \n "
 message3 = None
 
@@ -225,7 +225,7 @@ class MiApp(QMainWindow):
         # (buttons, text fields, spin boxes, monitor panel, etc.) 
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
-        self.setWindowIcon(QIcon(resource_path("ABEL.ico")))
+        self.setWindowIcon(QIcon(resource_path("ORLS.ico")))
         # Display startup messages in the GUI monitor console
         self.ui.Monitor.append(message)
         self.ui.Monitor.append(message2)
@@ -643,7 +643,7 @@ if __name__ == "__main__":
     from PyQt6.QtGui import QPalette, QColor
     from PyQt6.QtCore import Qt
     app = QApplication(sys.argv)
-    app.setWindowIcon(QIcon(resource_path("ABEL.ico")))
+    app.setWindowIcon(QIcon(resource_path("ORLS.ico")))
     # ================================
     # Force Fusion Style (Cross-platform)
     # ================================
@@ -671,4 +671,5 @@ if __name__ == "__main__":
     # ================================
     Main_Window = MiApp()
     Main_Window.show()
+
     sys.exit(app.exec())
